@@ -12,7 +12,7 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
-#define ADJUST 3
+#define SPECIAL 3
 
 / {
     macros {
@@ -63,8 +63,6 @@
             quick-tap-ms = <0>;
         };
     };
-
-    // Activate ADJUST layer by pressing raise and lower
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
