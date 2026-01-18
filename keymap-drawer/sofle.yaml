@@ -80,7 +80,7 @@ layers:
   - Alt+Ctl+RIGHT
   - Alt+Ctl+V
   - {t: ▽, type: trans}
-  - '6'
+  - Gui+Alt+I
   - '7'
   - '8'
   - '9'
@@ -92,7 +92,7 @@ layers:
   - Alt+Ctl+F
   - Alt+Ctl+T
   - Alt+Ctl+G
-  - ^
+  - Ctl+Sft+Gui+4
   - '&'
   - KP MULTIPLY
   - (
@@ -106,7 +106,7 @@ layers:
   - Alt+Ctl+C
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '['
+  - Sft+Gui+4
   - ']'
   - ;
   - ':'
