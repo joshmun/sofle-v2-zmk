@@ -66,7 +66,14 @@
 
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        special {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -82,11 +89,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE      &kp N1  &kp N2     &kp N3    &kp N4            &kp N5                            &kp N6     &kp N7     &kp N8     &kp N9   &kp N0    &work
-&kp TAB        &kp Q   &kp W      &kp E     &kp R             &kp T                             &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp BACKSPACE  &kp A   &kp S      &kp D     &kp F             &kp G                             &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT      &kp Z   &kp X      &kp C     &kp V             &kp B   &kp C_MUTE    &kp C_MUTE  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 3   &kp SPACE     &kp SPACE   &kp ENTER  &kp RCTRL  &mo 3      &to 3
+&kp GRAVE      &kp N1  &kp N2     &kp N3    &kp N4            &kp N5                              &kp N6          &kp N7          &kp N8        &kp N9     &kp N0    &work
+&kp TAB        &kp Q   &kp W      &kp E     &kp R             &kp T                               &kp Y           &kp U           &kp I         &kp O      &kp P     &kp BACKSLASH
+&kp BACKSPACE  &kp A   &kp S      &kp D     &kp F             &kp G                               &kp H           &kp J           &kp K         &kp L      &kp SEMI  &kp SQT
+&kp LSHFT      &kp Z   &kp X      &kp C     &kp V             &kp B   &kp C_MUTE     &kp C_MUTE   &kp N           &kp M           &kp COMMA     &kp DOT    &kp FSLH  &kp RSHFT
+                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 3   &lt 1 SPACE    &lt 2 SPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
             >;
 
             sensor-bindings =
@@ -137,7 +144,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        adjust_layer {
+        special_layer {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -145,13 +152,13 @@
             // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
             //                    |         |         |         |         |         | |      |      |      |       |      |
 
-            label = "adjust";
+            label = "special";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                             &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none      &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none      &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none      &none  &none  &none  &none  &none
+&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none      &none  &none  &none  &none  &none
+                             &none            &none            &none            &none            &none              &none  &kp ENTER  &none  &none  &none
             >;
         };
     };
