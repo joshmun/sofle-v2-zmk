@@ -90,7 +90,7 @@
 &as GRAVE      &as N1  &as N2     &as N3    &as N4            &as N5                              &as N6          &as N7          &as N8        &as N9     &as N0    &work
 &kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y           &as U           &as I         &as O      &as P     &as BACKSLASH
 &kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H           &as J           &as K         &as L      &as SEMI  &as SQT
-&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &kp C_MUTE     &kp C_MUTE   &as N           &as M           &as COMMA     &as DOT    &as FSLH  &gresc
+&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &kp C_MUTE     &kp C_MUTE   &as N           &as M           &as COMMA     &as DOT    &as FSLH  &kp ESC
                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
             >;
 
