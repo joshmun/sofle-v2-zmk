@@ -50,7 +50,7 @@ layers:
   - '&as COMMA'
   - '&as DOT'
   - '&as FSLH'
-  - {t: ESC, s: '`'}
+  - ESC
   - LCTRL
   - LALT
   - LEFT COMMAND
