@@ -54,13 +54,13 @@ layers:
   - LCTRL
   - LALT
   - LEFT COMMAND
-  - adjust
-  - SPACE
-  - SPACE
-  - ENTER
-  - RCTRL
-  - adjust
-  - {t: adjust, h: toggle}
+  - special
+  - {t: SPACE, h: lower}
+  - {t: SPACE, h: raise}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT
   lower:
   - '&studio_unlock'
   - F1
@@ -116,7 +116,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -178,12 +178,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  adjust:
+  special:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -240,7 +240,7 @@ layers:
   - {type: held}
   - ''
   - ''
-  - ''
+  - ENTER
   - ''
   - ''
   - ''
