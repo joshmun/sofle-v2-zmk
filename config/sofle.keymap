@@ -91,7 +91,7 @@
 &kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y           &as U           &as I         &as O      &as P     &as BACKSLASH
 &kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H           &as J           &as K         &as L      &as SEMI  &as SQT
 &kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &kp C_MUTE     &kp C_MUTE   &as N           &as M           &as COMMA     &as DOT    &as FSLH  &kp RSHFT
-                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 3   &lt 1 SPACE    &lt 2 SPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
             >;
 
             sensor-bindings =
@@ -152,11 +152,21 @@
 
             label = "special";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none      &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none      &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none      &none  &none  &none  &none  &none
-&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none      &none  &none  &none  &none  &none
-                             &none            &none            &none            &none            &none              &none  &kp ENTER  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
+&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
+                             &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp PLUS         &kp KP_NUMBER_0  &kp DOT          &kp PERCENT  &kp AMPS
+                &trans  &trans  &trans  &trans  &trans    &trans  &kp ENTER  &kp MINUS        &kp KP_MULTIPLY  &kp KP_DIVIDE
             >;
         };
     };
