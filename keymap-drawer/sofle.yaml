@@ -43,7 +43,7 @@ layers:
   - '&as C'
   - '&as V'
   - '&as B'
-  - MUTE
+  - {t: special, h: toggle}
   - MUTE
   - '&as N'
   - '&as M'
@@ -287,8 +287,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: default, h: toggle}
+  - Alt+Gui+8
   - {t: ▽, type: trans}
   - +
   - KP 0
