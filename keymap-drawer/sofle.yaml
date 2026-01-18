@@ -288,7 +288,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: default, h: toggle}
-  - Alt+Gui+8
+  - Gui+0
   - {t: ▽, type: trans}
   - +
   - KP 0
