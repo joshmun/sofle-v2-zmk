@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - DELETE
+  - '&work'
   - TAB
   - Q
   - W
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - P
-  - BSPC
+  - \
   - BACKSPACE
   - A
   - S
@@ -196,7 +196,7 @@ layers:
   - ''
   - ''
   - ''
-  - EP TOG
+  - ''
   - RGB HUD
   - RGB HUI
   - RGB SAD
@@ -242,5 +242,5 @@ layers:
   - ''
   - ''
   - ''
-  - adjust
-  - {t: default, h: toggle}
+  - ''
+  - ''
