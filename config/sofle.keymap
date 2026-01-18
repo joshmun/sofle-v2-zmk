@@ -112,9 +112,9 @@
 
             bindings = <
 &trans  &kp F1     &kp F2          &kp F3       &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8           &kp F9     &kp F10   &kp F11
-&trans       &kp LA(LC(Z))  &kp LA(LC(LEFT))  &kp LA(LC(RIGHT))  &kp LA(LC(V))    &trans                       &kp N6     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
-&trans          &kp LA(LC(D))  &kp LA(LC(E))     &kp LA(LC(F))      &kp LA(LC(T))  &kp LA(LC(G))                    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
-&trans          &kp LA(LC(X))  &kp LA(LC(B))     &trans             &trans         &kp LA(LC(C))    &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI         &kp COLON  &kp BSLH  &trans
+&trans       &kp LA(LC(Z))  &kp LA(LC(LEFT))  &kp LA(LC(RIGHT))  &kp LA(LC(V))    &trans                       &kp LG(LA(I))     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
+&trans          &kp LA(LC(D))  &kp LA(LC(E))     &kp LA(LC(F))      &kp LA(LC(T))  &kp LA(LC(G))               &kp LC(LS(LG(NUMBER_4)))  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
+&trans          &kp LA(LC(X))  &kp LA(LC(B))     &trans             &trans         &kp LA(LC(C))    &trans    &trans  &kp LS(LG(NUMBER_4))   &kp RBKT  &kp SEMI         &kp COLON  &kp BSLH  &trans
                            &trans  &trans       &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
             >;
 
