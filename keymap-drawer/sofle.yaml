@@ -54,7 +54,7 @@ layers:
   - LCTRL
   - LALT
   - LEFT COMMAND
-  - '4'
+  - special
   - {t: SPACE, h: lower}
   - {t: SPACE, h: raise}
   - LEFT ARROW
@@ -183,7 +183,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  special:
+  both:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -244,7 +244,7 @@ layers:
   - ''
   - ''
   - ''
-  '4':
+  special:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
