@@ -73,15 +73,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        mo_4 {
-            bindings = <&mo 4>;
-            key-positions = <28 26>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -97,11 +89,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&as GRAVE      &as N1  &as N2     &as N3    &as N4            &as N5                              &as N6     &as N7     &as N8     &as N9   &as N0    &work
-&kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y      &as U      &as I      &as O    &as P     &as BACKSLASH
-&kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H      &as J      &as K      &as L    &as SEMI  &as SQT
-&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &to 4          &kp C_MUTE   &as N      &as M      &as COMMA  &as DOT  &as FSLH  &kp ESC
-                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &kp ENTER  &as EQUAL  &as MINUS  &none
+&as GRAVE      &as N1  &as N2     &as N3    &as N4            &as N5                              &as N6     &as N7    &as N8              &as N9     &as N0    &work
+&kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y      &as U     &as I               &as O      &as P     &as BACKSLASH
+&kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H      &as J     &as K               &as L      &as SEMI  &as SQT
+&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &to 4          &kp C_MUTE   &as N      &as M     &mt COMMA UP_ARROW  &as DOT    &as FSLH  &kp ESC
+                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &kp ENTER  &kp LEFT  &kp DOWN            &kp RIGHT
             >;
 
             sensor-bindings =
