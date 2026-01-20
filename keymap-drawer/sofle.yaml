@@ -47,7 +47,7 @@ layers:
   - MUTE
   - '&as N'
   - '&as M'
-  - '&as COMMA'
+  - {t: UP ARROW, h: ','}
   - '&as DOT'
   - '&as FSLH'
   - ESC
@@ -58,9 +58,9 @@ layers:
   - {t: SPACE, h: lower}
   - {t: SPACE, h: raise}
   - ENTER
-  - '&as EQUAL'
-  - '&as MINUS'
-  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
   lower:
   - {t: ▽, type: trans}
   - F1
@@ -305,7 +305,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [28, 26]
-  k: special
-  l: [default]
