@@ -47,7 +47,7 @@ layers:
   - MUTE
   - '&as N'
   - '&as M'
-  - {t: UP ARROW, h: ','}
+  - {t: ',', h: UP ARROW}
   - '&as DOT'
   - '&as FSLH'
   - ESC
@@ -291,7 +291,7 @@ layers:
   - Gui+0
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ','
+  - UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,6 +302,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
