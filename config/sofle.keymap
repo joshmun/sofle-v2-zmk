@@ -49,6 +49,13 @@
             bindings = <&kp E &kp M &kp M &kp A &kp L &kp Y &kp N &kp H &kp O &kp P &kp E &kp M &kp U &kp N &kp N0 &kp N2 &kp N1 &kp N3 &kp N2 &kp N4 &kp ENTER>;
             label = "WORK";
         };
+
+        pw: pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT &kp ENTER>;
+            label = "PW";
+        };
     };
 
     behaviors {
@@ -164,11 +171,11 @@
 
         special {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &kp LG(N0)  &trans  &trans    &trans    &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans     &trans     &trans  &pw
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &kp UP     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &kp LG(N0)  &trans  &trans    &kp COMMA  &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans     &trans
             >;
 
             sensor-bindings =
