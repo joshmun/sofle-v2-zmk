@@ -99,7 +99,7 @@
 &as GRAVE      &as N1  &as N2     &as N3    &as N4            &as N5                              &as N6     &as N7    &as N8              &as N9     &as N0    &work
 &kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y      &as U     &as I               &as O      &as P     &as BACKSLASH
 &kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H      &as J     &as K               &as L      &as SEMI  &as SQT
-&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &to 4          &kp C_MUTE   &as N      &as M     &mt COMMA UP_ARROW  &as DOT    &as FSLH  &kp ESC
+&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &to 4          &kp C_MUTE   &as N      &as M     &mt UP_ARROW COMMA  &as DOT    &as FSLH  &kp ESC
                        &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &kp ENTER  &kp LEFT  &kp DOWN            &kp RIGHT
             >;
 
@@ -171,11 +171,11 @@
 
         special {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans     &trans     &trans  &pw
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &kp UP     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &kp LG(N0)  &trans  &trans    &kp COMMA  &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans      &trans  &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &trans        &trans     &trans  &pw
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &trans    &kp UP        &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 0     &kp LG(N0)  &trans  &trans    &kp UP_ARROW  &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT
             >;
 
             sensor-bindings =
