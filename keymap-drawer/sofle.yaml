@@ -75,10 +75,10 @@ layers:
   - F10
   - F11
   - {t: ▽, type: trans}
-  - Alt+Ctl+Z
-  - Alt+Ctl+LEFT
-  - Alt+Ctl+RIGHT
-  - Alt+Ctl+V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+Alt+I
   - '7'
@@ -87,11 +87,11 @@ layers:
   - ''
   - F12
   - {t: ▽, type: trans}
-  - Alt+Ctl+D
-  - Alt+Ctl+E
-  - Alt+Ctl+F
-  - Alt+Ctl+T
-  - Alt+Ctl+G
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+Sft+Gui+4
   - '4'
   - '5'
@@ -99,11 +99,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - Alt+Ctl+X
-  - Alt+Ctl+B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+Ctl+C
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Sft+Gui+4
@@ -258,10 +258,10 @@ layers:
   - {t: ▽, type: trans}
   - '&pw'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+Ctl+Z
+  - Alt+Ctl+LEFT
+  - Alt+Ctl+RIGHT
+  - Alt+Ctl+V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,11 +270,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+Ctl+D
+  - Alt+Ctl+E
+  - Alt+Ctl+F
+  - Alt+Ctl+T
+  - Alt+Ctl+G
   - {t: ▽, type: trans}
   - LEFT
   - DOWN
@@ -282,11 +282,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Alt+Ctl+X
+  - Alt+Ctl+B
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+Ctl+C
   - {t: default, h: toggle}
   - Gui+0
   - {t: ▽, type: trans}
