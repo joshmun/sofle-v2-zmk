@@ -281,7 +281,7 @@ layers:
   - '6'
   - ''
   - ''
-  - {t: ▽, type: trans}
+  - CAPSLOCK
   - Alt+Ctl+X
   - Alt+Ctl+B
   - {t: ▽, type: trans}
