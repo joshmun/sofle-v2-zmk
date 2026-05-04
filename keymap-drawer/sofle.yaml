@@ -260,9 +260,9 @@ layers:
   - {t: ▽, type: trans}
   - Alt+Ctl+Z
   - Alt+Ctl+LEFT
+  - {t: ▽, type: trans}
   - Alt+Ctl+RIGHT
   - Alt+Ctl+V
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '7'
   - '8'
