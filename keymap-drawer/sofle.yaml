@@ -12,7 +12,7 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - '&work'
+  - ''
   - TAB
   - '&as Q'
   - '&as W'
@@ -73,7 +73,7 @@ layers:
   - F8
   - F9
   - F10
-  - F11
+  - '&pw'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -256,7 +256,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&pw'
+  - '&work'
   - {t: ▽, type: trans}
   - Alt+Ctl+Z
   - Alt+Ctl+LEFT
