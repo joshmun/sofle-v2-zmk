@@ -12,7 +12,7 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - ''
+  - ENTER
   - TAB
   - '&as Q'
   - '&as W'
@@ -47,7 +47,7 @@ layers:
   - MUTE
   - '&as N'
   - '&as M'
-  - {t: ',', h: UP ARROW}
+  - '&as COMMA'
   - '&as DOT'
   - '&as FSLH'
   - ESC
@@ -57,24 +57,22 @@ layers:
   - special
   - {t: SPACE, h: lower}
   - {t: SPACE, h: raise}
-  - ENTER
-  - LEFT
+  - {t: LEFT, h: ENTER}
   - DOWN
+  - UP ARROW
   - RIGHT
   lower:
-  - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - '&pw'
-  - {t: ▽, type: trans}
+  - '&as GRAVE'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -85,7 +83,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - DELETE
   - '{'
   - '['
@@ -142,9 +142,9 @@ layers:
   - {t: ▽, type: trans}
   - Gui+Alt+I
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -154,6 +154,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -165,12 +168,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -180,9 +180,9 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ENTER
+  - '0'
+  - .
   both:
   - BT CLR
   - {t: BT, h: '0'}
@@ -246,16 +246,16 @@ layers:
   - ''
   special:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
   - '&work'
   - {t: ▽, type: trans}
   - Alt+Ctl+Z
@@ -264,9 +264,9 @@ layers:
   - Alt+Ctl+RIGHT
   - Alt+Ctl+V
   - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
+  - {t: ▽, type: trans}
+  - UP ARROW
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -276,11 +276,11 @@ layers:
   - Alt+Ctl+T
   - Alt+Ctl+G
   - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - ''
-  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - CAPSLOCK
   - Alt+Ctl+X
   - Alt+Ctl+B
@@ -290,11 +290,11 @@ layers:
   - {t: default, h: toggle}
   - Gui+0
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&pw'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,6 +302,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ENTER
-  - .
-  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
