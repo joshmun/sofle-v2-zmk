@@ -1,55 +1,55 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default:
-  - '&as GRAVE'
-  - '&as N1'
-  - '&as N2'
-  - '&as N3'
-  - '&as N4'
-  - '&as N5'
-  - '&as N6'
-  - '&as N7'
-  - '&as N8'
-  - '&as N9'
-  - '&as N0'
+  - {t: '`', h: '&shift GRAVE'}
+  - {t: '1', h: '&shift N1'}
+  - {t: '2', h: '&shift N2'}
+  - {t: '3', h: '&shift N3'}
+  - {t: '4', h: '&shift N4'}
+  - {t: '5', h: '&shift N5'}
+  - {t: '6', h: '&shift N6'}
+  - {t: '7', h: '&shift N7'}
+  - {t: '8', h: '&shift N8'}
+  - {t: '9', h: '&shift N9'}
+  - {t: '0', h: '&shift N0'}
   - ENTER
   - TAB
-  - '&as Q'
-  - '&as W'
-  - '&as E'
-  - '&as R'
-  - '&as T'
-  - '&as Y'
-  - '&as U'
-  - '&as I'
-  - '&as O'
-  - '&as P'
-  - '&as BACKSLASH'
+  - {t: Q, h: '&shift Q'}
+  - {t: W, h: '&shift W'}
+  - {t: E, h: '&shift E'}
+  - {t: R, h: '&shift R'}
+  - {t: T, h: '&shift T'}
+  - {t: Y, h: '&shift Y'}
+  - {t: U, h: '&shift U'}
+  - {t: I, h: '&shift I'}
+  - {t: O, h: '&shift O'}
+  - {t: P, h: '&shift P'}
+  - \
   - BACKSPACE
-  - '&as A'
-  - '&as S'
-  - '&as D'
-  - '&as F'
-  - '&as G'
-  - '&as H'
-  - '&as J'
-  - '&as K'
-  - '&as L'
-  - '&as SEMI'
-  - '&as SQT'
+  - {t: A, h: '&shift A'}
+  - {t: S, h: '&shift S'}
+  - {t: D, h: '&shift D'}
+  - {t: F, h: '&shift F'}
+  - {t: G, h: '&shift G'}
+  - {t: H, h: '&shift H'}
+  - {t: J, h: '&shift J'}
+  - {t: K, h: '&shift K'}
+  - {t: L, h: '&shift L'}
+  - {t: ;, h: '&shift SEMI'}
+  - {t: '''', h: '&shift SQT'}
   - LSHFT
-  - '&as Z'
-  - '&as X'
-  - '&as C'
-  - '&as V'
-  - '&as B'
+  - {t: Z, h: '&shift Z'}
+  - {t: X, h: '&shift X'}
+  - {t: C, h: '&shift C'}
+  - {t: V, h: '&shift V'}
+  - {t: B, h: '&shift B'}
   - {t: special, h: toggle}
   - MUTE
-  - '&as N'
-  - '&as M'
-  - '&as COMMA'
-  - '&as DOT'
-  - '&as FSLH'
+  - {t: N, h: '&shift N'}
+  - {t: M, h: '&shift M'}
+  - {t: ',', h: '&shift COMMA'}
+  - {t: ., h: '&shift DOT'}
+  - {t: /, h: '&shift FSLH'}
   - ESC
   - LCTRL
   - LALT
@@ -62,7 +62,7 @@ layers:
   - UP ARROW
   - RIGHT
   lower:
-  - '&as GRAVE'
+  - {t: '`', h: '&shift GRAVE'}
   - '!'
   - '@'
   - '#'
