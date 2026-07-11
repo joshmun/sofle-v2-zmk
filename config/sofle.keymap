@@ -9,13 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define BOTH 3
-
-#define AS(key) &as_ht key key
-
 / {
     macros {
         shift: with_lshift {
@@ -85,11 +78,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-AS(GRAVE)      AS(N1)     AS(N2)    AS(N3)            AS(N4)  AS(N5)           AS(N6)       AS(N7)          AS(N8)     AS(N9)        AS(N0)     &kp ENTER
-&kp TAB        AS(Q)      AS(W)     AS(E)             AS(R)   AS(T)            AS(Y)        AS(U)           AS(I)      AS(O)         AS(P)      &kp BACKSLASH
-&kp BACKSPACE  AS(A)      AS(S)     AS(D)             AS(F)   AS(G)            AS(H)        AS(J)           AS(K)      AS(L)         AS(SEMI)   AS(SQT)
-&kp LSHFT      AS(Z)      AS(X)     AS(C)             AS(V)   AS(B)        &to 4      &kp C_MUTE  AS(N)        AS(M)           AS(COMMA)  AS(DOT)       AS(FSLH)   &kp ESC
-               &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE      &lt 2 SPACE  &mt ENTER LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT
+&as_ht GRAVE GRAVE  &as_ht N1 N1  &as_ht N2 N2  &as_ht N3 N3      &as_ht N4 N4  &as_ht N5 N5       &as_ht N6 N6  &as_ht N7 N7    &as_ht N8 N8  &as_ht N9 N9  &as_ht N0 N0  &kp ENTER
+&kp TAB             &as_ht Q Q    &as_ht W W    &as_ht E E        &as_ht R R    &as_ht T T         &as_ht Y Y    &as_ht U U      &as_ht I I    &as_ht O O    &as_ht P P    &kp BACKSLASH
+&kp BACKSPACE       &as_ht A A    &as_ht S S    &as_ht D D        &as_ht F F    &as_ht G G         &as_ht H H    &as_ht J J      &as_ht K K    &as_ht L L    &as_ht SEMI SEMI  &as_ht SQT SQT
+&kp LSHFT           &as_ht Z Z    &as_ht X X    &as_ht C C        &as_ht V V    &as_ht B B     &to 4      &kp C_MUTE  &as_ht N N    &as_ht M M      &as_ht COMMA COMMA  &as_ht DOT DOT  &as_ht FSLH FSLH  &kp ESC
+                    &kp LCTRL     &kp LALT      &kp LEFT_COMMAND  &mo 4         &lt 1 SPACE        &lt 2 SPACE   &mt ENTER LEFT  &kp DOWN      &kp UP_ARROW  &kp RIGHT
             >;
 
             sensor-bindings =
@@ -108,7 +101,7 @@ AS(GRAVE)      AS(N1)     AS(N2)    AS(N3)            AS(N4)  AS(N5)           A
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-AS(GRAVE)   &kp EXCLAMATION  &kp AT_SIGN       &kp HASH              &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPERSAND     &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&as_ht GRAVE GRAVE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH              &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPERSAND     &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans      &trans           &trans            &trans                &trans      &trans             &trans     &trans            &trans                 &trans                &trans                 &trans
 &kp DELETE  &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp EQUAL   &kp LESS_THAN      &kp CARET  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RBKT              &kp RIGHT_BRACE        &kp SINGLE_QUOTE
 &kp LSHFT   &kp ASTERISK     &kp SLASH         &kp PLUS              &kp MINUS   &kp PERCENT    &trans      &trans  &kp HASH   &kp AMPERSAND     &kp PIPE               &kp PERIOD            &kp DOLLAR             &kp BACKSLASH
