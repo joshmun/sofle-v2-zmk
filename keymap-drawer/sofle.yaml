@@ -245,7 +245,7 @@ layers:
   - ''
   - ''
   special:
-  - {t: ▽, type: trans}
+  - Ctl+Gui+SPACE
   - F1
   - F2
   - F3
