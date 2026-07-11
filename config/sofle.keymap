@@ -14,6 +14,8 @@
 #define RAISE 2
 #define BOTH 3
 
+#define AS(key) &as_ht key key
+
 / {
     macros {
         shift: with_lshift {
@@ -28,19 +30,6 @@
                 <&kp LSHFT>;
 
             label = "KEY_PRESS_WITH_LEFT_SHIFT_MODIFIER";
-        };
-
-        as: autoshift {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
-
-            label = "AUTOSHIFT_KEYPRESS";
         };
 
         work: work {
@@ -96,11 +85,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&as GRAVE      &as N1  &as N2     &as N3    &as N4            &as N5                              &as N6          &as N7    &as N8        &as N9     &as N0    &kp ENTER
-&kp TAB        &as Q   &as W      &as E     &as R             &as T                               &as Y           &as U     &as I         &as O      &as P     &as BACKSLASH
-&kp BACKSPACE  &as A   &as S      &as D     &as F             &as G                               &as H           &as J     &as K         &as L      &as SEMI  &as SQT
-&kp LSHFT      &as Z   &as X      &as C     &as V             &as B   &to 4          &kp C_MUTE   &as N           &as M     &as COMMA     &as DOT    &as FSLH  &kp ESC
-                       &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE    &lt 2 SPACE  &mt ENTER LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT
+AS(GRAVE)      AS(N1)     AS(N2)    AS(N3)            AS(N4)  AS(N5)           AS(N6)       AS(N7)          AS(N8)     AS(N9)        AS(N0)     &kp ENTER
+&kp TAB        AS(Q)      AS(W)     AS(E)             AS(R)   AS(T)            AS(Y)        AS(U)           AS(I)      AS(O)         AS(P)      &kp BACKSLASH
+&kp BACKSPACE  AS(A)      AS(S)     AS(D)             AS(F)   AS(G)            AS(H)        AS(J)           AS(K)      AS(L)         AS(SEMI)   AS(SQT)
+&kp LSHFT      AS(Z)      AS(X)     AS(C)             AS(V)   AS(B)        &to 4      &kp C_MUTE  AS(N)        AS(M)           AS(COMMA)  AS(DOT)       AS(FSLH)   &kp ESC
+               &kp LCTRL  &kp LALT  &kp LEFT_COMMAND  &mo 4   &lt 1 SPACE      &lt 2 SPACE  &mt ENTER LEFT  &kp DOWN   &kp UP_ARROW  &kp RIGHT
             >;
 
             sensor-bindings =
@@ -111,7 +100,6 @@
         lower_layer {
             label = "lower";
 
-            // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
             // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
@@ -120,11 +108,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&as GRAVE   &kp EXCLAMATION  &kp AT_SIGN       &kp HASH              &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND     &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans      &trans           &trans            &trans                &trans      &trans                           &trans     &trans            &trans                 &trans                &trans                 &trans
-&kp DELETE  &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp EQUAL   &kp LESS_THAN                    &kp CARET  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RBKT              &kp RIGHT_BRACE        &kp SINGLE_QUOTE
-&kp LSHFT   &kp ASTERISK     &kp SLASH         &kp PLUS              &kp MINUS   &kp PERCENT    &trans    &trans  &kp HASH   &kp AMPERSAND     &kp PIPE               &kp PERIOD            &kp DOLLAR             &kp BACKSLASH
-                             &trans            &trans                &trans      &trans         &trans    &trans  &trans     &trans            &trans                 &trans
+AS(GRAVE)   &kp EXCLAMATION  &kp AT_SIGN       &kp HASH              &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPERSAND     &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans      &trans           &trans            &trans                &trans      &trans             &trans     &trans            &trans                 &trans                &trans                 &trans
+&kp DELETE  &kp LEFT_BRACE   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp EQUAL   &kp LESS_THAN      &kp CARET  &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RBKT              &kp RIGHT_BRACE        &kp SINGLE_QUOTE
+&kp LSHFT   &kp ASTERISK     &kp SLASH         &kp PLUS              &kp MINUS   &kp PERCENT    &trans      &trans  &kp HASH   &kp AMPERSAND     &kp PIPE               &kp PERIOD            &kp DOLLAR             &kp BACKSLASH
+            &trans           &trans            &trans                &trans      &trans             &trans     &trans            &trans                 &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -141,11 +129,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&mt TILDE GRAVE  &kp EXCLAMATION  &kp AT_SIGN               &kp HASH              &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
-&trans           &trans           &trans                    &trans                &trans      &kp LG(LA(I))                    &trans     &kp N7         &kp N8        &kp N9                &trans                 &trans
-&trans           &trans           &kp LC(LS(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans      &trans                           &trans     &kp NUMBER_4   &kp N5        &kp NUMBER_6          &trans                 &trans
-&trans           &trans           &trans                    &trans                &trans      &trans         &trans    &trans  &trans     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3          &trans                 &trans
-                                  &trans                    &trans                &trans      &trans         &trans    &trans  &trans     &kp ENTER      &kp N0        &kp DOT
+&mt TILDE GRAVE  &kp EXCLAMATION  &kp AT_SIGN               &kp HASH              &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
+&trans           &trans           &trans                    &trans                &trans      &kp LG(LA(I))      &trans     &kp N7         &kp N8        &kp N9                &trans                 &trans
+&trans           &trans           &kp LC(LS(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))  &trans      &trans             &trans     &kp NUMBER_4   &kp N5        &kp NUMBER_6          &trans                 &trans
+&trans           &trans           &trans                    &trans                &trans      &trans         &trans      &trans  &trans     &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3          &trans                 &trans
+                 &trans           &trans                    &trans                &trans      &trans             &trans     &trans         &kp ENTER     &kp N0                &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -161,22 +149,22 @@
 
             label = "both";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                             &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4         &none  &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF      &none  &none  &none  &none  &none  &none
+&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                &none  &none  &none  &none  &none  &none
+&none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG      &none  &none  &none  &none  &none  &none  &none
+            &none            &none            &none            &none            &none                &none  &none  &none  &none  &none
             >;
         };
 
         special {
             label = "special";
             bindings = <
-&trans        &kp F1         &kp F2            &kp F3         &kp F4             &kp F5                               &kp F6     &kp F7    &kp F8        &kp F9     &kp F10  &work
-&trans        &kp LA(LC(Z))  &kp LA(LC(LEFT))  &trans         &kp LA(LC(RIGHT))  &kp LA(LC(V))                        &trans     &trans    &kp UP_ARROW  &trans     &trans   &trans
-&trans        &kp LA(LC(D))  &kp LA(LC(E))     &kp LA(LC(F))  &kp LA(LC(T))      &kp LA(LC(G))                        &trans     &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &trans
-&kp CAPSLOCK  &kp LA(LC(X))  &kp LA(LC(B))     &trans         &trans             &kp LA(LC(C))  &to 0     &kp LG(N0)  &trans     &trans    &trans        &trans     &trans   &pw
-                             &trans            &trans         &trans             &trans         &trans    &trans      &kp ENTER  &trans    &trans        &trans
+&trans        &kp F1         &kp F2            &kp F3         &kp F4             &kp F5             &kp F6  &kp F7     &kp F8        &kp F9     &kp F10  &work
+&trans        &kp LA(LC(Z))  &kp LA(LC(LEFT))  &trans         &kp LA(LC(RIGHT))  &kp LA(LC(V))      &trans  &trans     &kp UP_ARROW  &trans     &trans   &trans
+&trans        &kp LA(LC(D))  &kp LA(LC(E))     &kp LA(LC(F))  &kp LA(LC(T))      &kp LA(LC(G))      &trans  &kp LEFT   &kp DOWN      &kp RIGHT  &trans   &trans
+&kp CAPSLOCK  &kp LA(LC(X))  &kp LA(LC(B))     &trans         &trans             &kp LA(LC(C))  &to 0      &kp LG(N0)  &trans  &trans     &trans        &trans     &trans   &pw
+              &trans         &trans            &trans         &trans             &trans             &trans  &kp ENTER  &trans        &trans     &trans
             >;
 
             sensor-bindings =
