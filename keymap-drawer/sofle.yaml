@@ -24,7 +24,7 @@ layers:
   - {t: I, h: '&shift I'}
   - {t: O, h: '&shift O'}
   - {t: P, h: '&shift P'}
-  - \
+  - {t: \, h: '&shift BACKSLASH'}
   - BACKSPACE
   - {t: A, h: '&shift A'}
   - {t: S, h: '&shift S'}
@@ -57,7 +57,7 @@ layers:
   - special
   - {t: SPACE, h: lower}
   - {t: SPACE, h: raise}
-  - {t: LEFT, h: ENTER}
+  - LEFT
   - DOWN
   - UP ARROW
   - RIGHT
