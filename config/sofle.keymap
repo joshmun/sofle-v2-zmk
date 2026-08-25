@@ -78,11 +78,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&as_ht GRAVE GRAVE  &as_ht N1 N1  &as_ht N2 N2  &as_ht N3 N3  &as_ht N4 N4      &as_ht N5 N5                              &as_ht N6 N6    &as_ht N7 N7  &as_ht N8 N8        &as_ht N9 N9    &as_ht N0 N0      &kp ENTER
-&kp TAB             &as_ht Q Q    &as_ht W W    &as_ht E E    &as_ht R R        &as_ht T T                                &as_ht Y Y      &as_ht U U    &as_ht I I          &as_ht O O      &as_ht P P        &kp BACKSLASH
-&kp BACKSPACE       &as_ht A A    &as_ht S S    &as_ht D D    &as_ht F F        &as_ht G G                                &as_ht H H      &as_ht J J    &as_ht K K          &as_ht L L      &as_ht SEMI SEMI  &as_ht SQT SQT
-&kp LSHFT           &as_ht Z Z    &as_ht X X    &as_ht C C    &as_ht V V        &as_ht B B    &to 4          &kp C_MUTE   &as_ht N N      &as_ht M M    &as_ht COMMA COMMA  &as_ht DOT DOT  &as_ht FSLH FSLH  &kp ESC
-                                  &kp LCTRL     &kp LALT      &kp LEFT_COMMAND  &mo 4         &lt 1 SPACE    &lt 2 SPACE  &mt ENTER LEFT  &kp DOWN      &kp UP_ARROW        &kp RIGHT
+&as_ht GRAVE GRAVE  &as_ht N1 N1  &as_ht N2 N2  &as_ht N3 N3  &as_ht N4 N4      &as_ht N5 N5                              &as_ht N6 N6  &as_ht N7 N7  &as_ht N8 N8        &as_ht N9 N9    &as_ht N0 N0      &kp ENTER
+&kp TAB             &as_ht Q Q    &as_ht W W    &as_ht E E    &as_ht R R        &as_ht T T                                &as_ht Y Y    &as_ht U U    &as_ht I I          &as_ht O O      &as_ht P P        &as_ht BACKSLASH BACKSLASH
+&kp BACKSPACE       &as_ht A A    &as_ht S S    &as_ht D D    &as_ht F F        &as_ht G G                                &as_ht H H    &as_ht J J    &as_ht K K          &as_ht L L      &as_ht SEMI SEMI  &as_ht SQT SQT
+&kp LSHFT           &as_ht Z Z    &as_ht X X    &as_ht C C    &as_ht V V        &as_ht B B    &to 4          &kp C_MUTE   &as_ht N N    &as_ht M M    &as_ht COMMA COMMA  &as_ht DOT DOT  &as_ht FSLH FSLH  &kp ESC
+                                  &kp LCTRL     &kp LALT      &kp LEFT_COMMAND  &mo 4         &lt 1 SPACE    &lt 2 SPACE  &kp LEFT      &kp DOWN      &kp UP_ARROW        &kp RIGHT
             >;
 
             sensor-bindings =
